@@ -101,7 +101,7 @@ for seccion in urlOpciones:
                 print('Bajando HTML de: ' + urlParaBajar)
                 file.write("\t\t" + 'Bajando HTML de: ' + urlParaBajar  + '\n' )
                 nombreArticulo = urlParaBajar.split('/')[3]
-                articulos = open(pathCarpeta + '/' + nombreArticulo + '.txt', 'w+')
+                articulos = open(pathCarpeta + '/' + nombreArticulo + '.txt', encoding = 'utf-8', mode = 'w+')
                 lnArticulo = requests.get(urlParaBajar)
                 try:
                     lnArticulo.raise_for_status()
